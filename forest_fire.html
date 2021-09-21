@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+
+.button {
+  background-color: #00004d; /* Dark blue */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+  </style>
+
+  <title>Forest Fire</title>
+  <style>
+  h1{
+  font-family: "Monaco", monospace;
+  }
+  h3{
+  font-family: "Lucida Handwriting", Cursive;
+  }
+
+    body{
+    background-image:
+    url('https://api.timeforkids.com/wp-content/uploads/2019/09/final-cover-forest.jpg?w=1024');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: 100% 100%;
+    }
+  </style>
+</head>
+
+<body>
+<center>
+
+  <div class="section no-pad-bot" id="index-banner">
+    <h2 class="container">
+      <br>
+      <h1 class="header"; style = "color:#00004d"> Forest Fire Prediction </h1>
+      <div class="row center" style="color:#802b00">
+        <h3 class="header col s12 light"; style = "font-style:italic;">Predict the probability of Forest-Fire Occurence
+        <br>
+        </h3>
+      </div>
+
+              <div class="row">
+    <form action='/predict' method="post" class="col s12">
+      <div class="row">
+        <div class="input-field col s4" style="color:#802b00">
+            <label for="first_name"><font size = "+1"; face="Comic Sans MS"><b>Temperature</b> </font></label>
+            <br> <br>
+          <input placeholder="Temperature in Celsius" name="Temperature" id="first_name" type="text" class="validate">
+        </div>
+        <br><br>
+        <div class="input-field col s4" style="color:#802b00">
+
+          <label for="last_name"><font size = "+1"; face="Comic Sans MS"><b>Oxygen </b></font></label>
+            <br><br>
+          <input id="last_name" name="Oxygen" placeholder="Oxygen content in ppm"  type="text" class="validate">
+
+        </div>
+        <br><br>
+
+        <div class="input-field col s4" style="color:#802b00">
+          <label for="_name"><font size = "+1"; face="Comic Sans MS"><b>Humidity</b></font></label>
+            <br><br>
+          <input id="_name" name="Humidity" placeholder="Humidity %" type="text" class="validate">
+
+        </div>
+        <br><br>
+
+      </div>
+
+      <div class="row center">
+
+          <button type="submit" class="button">Predict Probability</button>
+      </div>
+    </form>
+      </div>
+
+      <br><b><h2><font color="#00004d"; face="Comic Sans MS">
+      {{pred}}</b><br></font></h2>
+
+    </div>
+  </div>
+
+
+    <br><br>
+  </div>
+  </div>
+</center>
+
+  </body>
+</html>
+
